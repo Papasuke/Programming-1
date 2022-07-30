@@ -1,5 +1,6 @@
 package app.model.register;
 
+import app.lib.counting.Counting;
 import app.lib.time.DateAndTime;
 import app.lib.crud.read.ReadCol;
 import app.lib.hashing.Hashing;
@@ -17,7 +18,7 @@ public class Model {
     private String password;
     private String fullName;
     private String phoneNumber;
-    private static int id = 0;
+    private static int id = Counting.getCount();
 
 
     public Model() {
@@ -61,11 +62,11 @@ public class Model {
         int lines = 0;
         while (reader.readLine() != null){
             if(lines == 0){
-                id++;
+                Counting.increment(id);
                 lines++;
             }
             else{
-                id++;
+                Counting.increment(id);
             }
             lines++;
         }
