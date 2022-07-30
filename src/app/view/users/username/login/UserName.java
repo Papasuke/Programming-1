@@ -21,8 +21,7 @@ public class UserName implements InputTypeString{
 
         while(!data.isValid(userName) || !userNameDB.contains(userName)){
             System.out.println("The username does not exist, please sign up !!!!");
-            app.view.register.Register form = new app.view.register.Register();
-            form.view();
+            System.exit(1);
         }
         this.setUserName(userName);
         return userName;
