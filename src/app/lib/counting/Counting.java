@@ -7,7 +7,7 @@ public class Counting{
         return count;
     }
 
-    public static synchronized void increment(){
+    public static synchronized void increment(int count){
         count++;
     }
 
