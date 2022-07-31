@@ -7,6 +7,7 @@ import app.view.register.Register;
 
 import java.io.IOException;
 
+/** This model class is to handle the logic of request after receiving the user's option (request) from API */
 public class Model implements Handle {
     @Override
     public void handle(String option) throws IOException, InterruptedException {

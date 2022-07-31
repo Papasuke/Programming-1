@@ -6,6 +6,7 @@ import app.view.option.Option;
 import java.io.IOException;
 
 public class KeepVisiting extends API implements Notification{
+    /** This method is to implement and view the notification from interface */
     @Override
     public void view() {
         System.out.println("\n===================================================================== Keep visiting or exit !!! =====================================================================");
@@ -13,6 +14,8 @@ public class KeepVisiting extends API implements Notification{
                     1. Visit
                     2. Exit""");
     }
+
+    /** This method is to get the option (request) from users */
     public String getOption() throws IOException {
         String option = new Option().input();
 

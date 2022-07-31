@@ -20,6 +20,7 @@ public class Register {
 
     }
 
+    /** This method is to view the register form after receiving the result from model*/
     public void view() throws IOException {
         System.out.println("===================================================================== User Registration Form =====================================================================");
         app.model.register.Model user = new app.model.register.Model();

@@ -10,6 +10,7 @@ public class Login{
 
     }
 
+    /** This method is to view the login form after receiving the result from model*/
     public void view() throws IOException {
         System.out.println("\n===================================================================== Member Login Form =====================================================================");
         app.model.login.Model member = new app.model.login.Model();

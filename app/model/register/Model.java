@@ -35,7 +35,6 @@ public class Model extends CreateObj implements WriteFile{
     private String phoneNumber;
     private static int id = Counting.getCount();
 
-
     public Model() {
     }
 
