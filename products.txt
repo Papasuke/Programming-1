@@ -1,0 +1,5 @@
+1, laptop, Macbook Pro 13 inch Retina 2016 MLL42 Gray Core i5-6360U, 17900000
+2, laptop, Macbook Pro 13 inch Late 2016 Core i7-6600U, 19900000
+3, laptop, Macbook Pro (13-inch, 2016, Four Thunderbolt 3 Ports, MLH12) TouchBar Core i5-6267U, 19900000
+4, laptop, Macbook Pro 13 inch Retina 2016 MNQF2 Gray Touch Bar Core i5-6267U, 21900000
+

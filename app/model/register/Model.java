@@ -2,8 +2,9 @@ package app.model.register;
 
 import app.lib.counting.Counting;
 import app.lib.crud.create.CreateObj;
+import app.lib.crud.read.ReadSpecificColumn;
 import app.lib.time.DateAndTime;
-import app.lib.crud.read.ReadCol;
+import app.lib.crud.read.ReadSpecificColumn;
 import app.lib.hashing.Hashing;
 import app.implement.write.WriteFile;
 
@@ -96,7 +97,7 @@ public class Model extends CreateObj implements WriteFile{
 
             db.add(this.toString());
 
-            String[] data = ReadCol.readSpecificColumn(1, "users.txt", ",");
+            String[] data = ReadSpecificColumn.readSpecificColumn(1, "users.txt", ",");
 
             for(int i = 0; i < data.length; i++){
                 userName.add(data[i]);

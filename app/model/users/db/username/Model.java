@@ -1,11 +1,12 @@
 package app.model.users.db.username;
 
-import app.lib.crud.read.ReadCol;
+import app.lib.crud.read.ReadSpecificColumn;
+
 import java.util.ArrayList;
 
 public class Model {
     public static ArrayList<String> getAllUserName(){
-        String[] readUserName = ReadCol.readSpecificColumn(1, "users.txt", ",");
+        String[] readUserName = ReadSpecificColumn.readSpecificColumn(1, "users.txt", ",");
         ArrayList<String> checkUserName = new ArrayList<>();
 
         for(int i = 0; i < readUserName.length; i++){

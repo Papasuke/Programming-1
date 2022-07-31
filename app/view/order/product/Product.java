@@ -1,4 +1,13 @@
-package app.view.product;
+package app.view.order.product;
+
+import app.lib.crud.read.ReadAlline;
+import app.lib.crud.read.ReadSpecificColumn;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
 
 public class Product {
     private String id;
@@ -54,5 +63,16 @@ public class Product {
 
     public void remove(){
 
+    }
+
+    public void view() throws IOException {
+        ReadAlline line = new ReadAlline();
+
+        ArrayList<String[]> products = line.read("products.txt");
+
+        for(int i = 0; i < products.size() - 1; i++){
+            System.out.println("\nID: " + products.get(i)[0] + ", Category:" + products.get(i)[1] + ", Name:" +
+                    products.get(i)[2] + ", Price:" + products.get(i)[3] + " VND");
+        }
     }
 }

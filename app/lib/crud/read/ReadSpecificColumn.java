@@ -5,7 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReadCol {
+public class ReadSpecificColumn {
     public static String[] readSpecificColumn(int col, String filePath, String delimiter){
         String data[];
         String currentLine;

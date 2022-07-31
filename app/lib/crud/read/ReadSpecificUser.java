@@ -3,8 +3,8 @@ package app.lib.crud.read;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-public class ReadLine {
-    public String[] readSpecificLine(String fetch, int column, String filePath, String delimiter) {
+public class ReadSpecificUser {
+    public String[] getSpecificUser(String fetch, int column, String filePath, String delimiter) {
         String currentLine;
         String[] data;
         try {

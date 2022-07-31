@@ -1,3 +1,8 @@
+package app.view.order;
+
+import app.view.order.product.Product;
+import app.view.order.user.Users;
+
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -14,7 +19,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(int id, Users user, Product product) {
+    public Order(int id, Users user, Product goods) {
         this.id = id;
         this.user = user;
         this.product = product;

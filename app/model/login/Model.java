@@ -1,6 +1,6 @@
 package app.model.login;
 
-import app.lib.crud.read.ReadLine;
+import app.lib.crud.read.ReadSpecificUser;
 import app.lib.hashing.Hashing;
 import app.view.users.username.login.UserName;
 import java.io.BufferedReader;
@@ -14,10 +14,13 @@ public class Model {
     public void login() throws IOException {
         UserName userName = new UserName();
         app.view.users.password.login.Password password = new app.view.users.password.login.Password();
+
         System.out.println("Login Status: "+ isLogged);
+
         if(verifyLogin(userName.input(), password.input(), "users.txt", ",")){
-            ReadLine readLine = new ReadLine();
-            String[] data = readLine.readSpecificLine(userName.getUserName(), 1, "users.txt", ",");
+            ReadSpecificUser readLine = new ReadSpecificUser();
+            String[] data = readLine.getSpecificUser(userName.getUserName(), 1, "users.txt", ",");
+
             System.out.println("\nUsername: " + data[1] + "\nFull name: " + data[3] + "\nPhone-number: " + data[4]);
 
             isLogged = true;
