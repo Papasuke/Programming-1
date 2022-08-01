@@ -1,4 +1,4 @@
-package src.app.lib.crud.read;
+package app.lib.crud.create;
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
