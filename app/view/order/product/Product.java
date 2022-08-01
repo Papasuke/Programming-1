@@ -1,6 +1,6 @@
 package app.view.order.product;
 
-import app.lib.crud.read.ReadAlline;
+import app.lib.crud.read.ReadAllLine;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -61,7 +61,7 @@ public class Product {
     }
 
     public void view() throws IOException {
-        ReadAlline line = new ReadAlline();
+        ReadAllLine line = new ReadAllLine();
 
         ArrayList<String[]> products = line.read("products.txt");
 
