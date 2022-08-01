@@ -3,6 +3,10 @@ package app.view.order;
 import app.view.order.product.Product;
 import app.view.order.user.Users;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +19,7 @@ public class Order {
     private Date date;
     private Map<Integer, String> orderInfo;
     // private ArrayList<> detail;
+    final String outputFilePath = "Programming-1/orders.txt";
 
     public Order() {
     }
@@ -22,9 +27,9 @@ public class Order {
     public Order(int id, Users user, Product goods) {
         this.id = id;
         this.user = user;
-        this.product = product;
+        this.product = goods;
 
-        orderInfo = new HashMap<Integer, String>();
+        orderInfo = new HashMap<>();
         date = new Date();
     }
 
@@ -38,7 +43,7 @@ public class Order {
     public void printOrder(){
         for (Integer name : orderInfo.keySet()) {
             String key = name.toString();
-            String value = orderInfo.get(name).toString();
+            String value = orderInfo.get(name);
             System.out.println(key + " " + value);
         }
     }
@@ -69,6 +74,30 @@ public class Order {
             }
         }
     }
+
+    public void writeFile(){
+        File file = new File(outputFilePath);
+        try (BufferedWriter bf = new BufferedWriter(new FileWriter("orders.txt"))) {
+            for (Map.Entry<Integer, String> entry :
+                    orderInfo.entrySet()) {
+
+                // put key and value separated by a colon
+                bf.write(entry.getKey() + ":"
+                        + entry.getValue());
+
+                // new line
+                bf.newLine();
+            }
+
+            bf.flush();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        // always close the writer
+    }
+
+
 
     public int getId() {
         return id;
