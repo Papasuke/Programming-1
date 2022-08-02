@@ -10,8 +10,8 @@
 10, airpods, airpods 2nd Generation, white, 3999000
 11, airpods, airpods max, green, 5999000
 12, airpods, airpods pro, white, 4900000
-13, iPad, iPad Air, pink, 15999000
-14, iPad, iPad Pro 12.9-inch Liquid Retina XDR display M1 chip, silver, 41999000
-15, iPad, iPad mini, starlight, 21890000
-16, desktop, iMac 24'' inch, red, 56999000
-17, desktop, iMac 24 inch, blue, 56999000
+13, iPad, iPad Air 2021, pink, 15999000
+14, iPad, iPad Pro 2021 12 inch Liquid Retina XDR display M1 chip, silver, 41999000
+15, iPad, iPad mini 2020, starlight, 21890000
+16, desktop, Apple iMac 27 inch 2020 Retina  Core i7 512GB SSD, silver, 56999000
+17, desktop, Apple iMac 24 inch 2021 Retina M1 8 Core CPU 7 Core GPU 8GB 256GB SSD, blue, 56999000
