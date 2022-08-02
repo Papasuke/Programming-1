@@ -21,7 +21,6 @@ public class Admin implements InputTypeString {
         String devId = sc.nextLine();
         while(!data.isValid(devId) || !devIdDB.contains(devId)){
             System.out.println("The Developing ID does not exist, please sign up !!!!");
-            System.exit(1);
         }
         this.setDevId(devId);
         return devId;
